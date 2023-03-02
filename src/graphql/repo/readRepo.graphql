@@ -1,0 +1,11 @@
+query GetRepos {
+  getRepos(user_name: $user_name)
+    @rest(type: "Repo", path: "/users/{args.user_name}/repos") {
+    id
+    name
+    fork
+    description
+    size
+    language
+  }
+}
